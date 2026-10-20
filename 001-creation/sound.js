@@ -1,0 +1,10 @@
+/* Locally synthesized, quiet soundscape. No remote audio files. */
+class Soundscape {
+  constructor(){this.ctx=null;this.on=true;this.layers=[];this.last=0;}
+  async start(){try{if(!this.ctx){this.ctx=new(window.AudioContext||window.webkitAudioContext)();this.master=this.ctx.createGain();this.master.gain.value=.16;const compressor=this.ctx.createDynamicsCompressor();this.master.connect(compressor);compressor.connect(this.ctx.destination);}
+  await this.ctx.resume();}catch(e){document.querySelector('#notice').textContent='このブラウザでは音を開始できません。音なしで体験できます。';}}
+  setDay(day){if(!this.ctx)return;while(this.layers.length<day){const n=this.layers.length;const gain=this.ctx.createGain();gain.gain.value=0;gain.connect(this.master);if(n===1||n===2){const buffer=this.ctx.createBuffer(1,this.ctx.sampleRate*3,this.ctx.sampleRate);const data=buffer.getChannelData(0);for(let i=0;i<data.length;i++)data[i]=(Math.random()*2-1)*.12;const noise=this.ctx.createBufferSource();noise.buffer=buffer;noise.loop=true;const filter=this.ctx.createBiquadFilter();filter.type='lowpass';filter.frequency.value=n===1?450:1000;noise.connect(filter);filter.connect(gain);noise.start();}else{const osc=this.ctx.createOscillator();osc.type='sine';osc.frequency.value=[130.81,0,0,196,261.63,164.81,98][n];osc.connect(gain);osc.start();}gain.gain.setTargetAtTime(n<3?.16:.045,this.ctx.currentTime,2);this.layers.push(gain);}}
+  tone(freq=440){if(!this.ctx||!this.on||this.ctx.state!=='running')return;const o=this.ctx.createOscillator(),g=this.ctx.createGain(),t=this.ctx.currentTime;o.frequency.setValueAtTime(freq,t);o.frequency.exponentialRampToValueAtTime(freq*.72,t+.4);g.gain.setValueAtTime(.09,t);g.gain.exponentialRampToValueAtTime(.0001,t+.8);o.connect(g);g.connect(this.master);o.start();o.stop(t+.85);}
+  tick(day,t){if(!this.on||!this.ctx)return;if(t-this.last>7){this.last=t;if(day>=5)this.tone(800+Math.sin(t)*320);if(day>=6)setTimeout(()=>this.tone(180),800);}}
+  toggle(){this.on=!this.on;if(this.master)this.master.gain.setTargetAtTime(this.on?.16:0,this.ctx.currentTime,.2);}
+}

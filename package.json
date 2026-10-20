@@ -1,0 +1,1 @@
+{"name":"bible-sketch","version":"1.0.0","private":true,"description":"Interactive interpretations of biblical stories","scripts":{"test":"node tests/creation.cjs"},"devDependencies":{"playwright":"1.56.1"}}
