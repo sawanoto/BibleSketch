@@ -1,0 +1,5 @@
+/* Gallery additions stay separate from the styles used by released works. */
+.work+.work{margin-top:42px}
+.cover-cain{background:#26363d;display:flex;align-items:center}
+.cover-cain img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.cover-cain small{background:#152630bb;padding:6px 10px;border-radius:2px;font-size:10px;letter-spacing:.12em}

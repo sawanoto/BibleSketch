@@ -1,1 +1,13 @@
-{"name":"bible-sketch","version":"1.0.0","private":true,"description":"Interactive interpretations of biblical stories","scripts":{"test":"node tests/creation.cjs"},"devDependencies":{"playwright":"1.56.1"}}
+{
+  "name": "bible-sketch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive interpretations of biblical stories",
+  "scripts": {
+    "test": "node tests/creation.cjs",
+    "test:cain-abel": "node tests/cain-abel.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

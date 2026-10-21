@@ -1,0 +1,45 @@
+.cain-abel{background:#131e23}
+.cain-abel #stage{background:#1c2930;isolation:isolate}
+.cain-abel canvas{position:relative;z-index:0;touch-action:pan-y}
+.cain-abel .heading{gap:20px}
+.cain-abel .heading h1{font-size:clamp(20px,3vw,27px)}
+.cain-abel .controls{gap:20px;min-height:118px;align-items:center}
+.cain-abel .guidance{flex:1;min-width:0}
+.cain-abel #hint{max-width:none}
+.cain-abel #reset{flex-shrink:0;font-size:12px;background:transparent}
+.cain-abel #offer{background:var(--paper);color:#283c3f;min-width:120px}
+.cain-abel #offer:disabled{opacity:.5}
+#gesture-guide{color:var(--muted);font-size:11px;line-height:1.7;margin:10px 0 0}
+#gesture-guide span{display:block;font-size:10px}
+.character-name{position:absolute;bottom:3%;width:28%;text-align:center;pointer-events:none;font-size:11px;letter-spacing:.14em;color:#b9b7a8;transition:opacity 1.2s}
+.character-name span{display:block;font-size:9px;letter-spacing:.03em;line-height:1.7;opacity:.75}
+.cain-name{left:13%}.abel-name{left:59%}
+.scene-target{position:absolute;z-index:2;padding:0;border:1px solid transparent;background:transparent;transition:border-color .2s,background .2s;min-width:44px;min-height:44px}
+.scene-target:disabled{opacity:0;pointer-events:none}
+.scene-target:enabled{cursor:pointer;opacity:1}
+.scene-target:enabled::after{content:'';position:absolute;border-bottom:1px dashed #d2bb88a3;width:55%;bottom:-4px;left:22.5%}
+.scene-target:enabled:hover{background:#e6ce920c;border-color:#e6ce9244}
+.scene-target:focus-visible{outline-offset:2px;outline-width:2px}
+.basket-target{left:25.2%;top:69%;width:15.6%;height:16%}
+.abel-target{left:61%;top:46%;width:24%;height:28%}
+.cain-abel select{max-width:100%;font-size:12px}
+.cain-abel .tool-row label{min-width:0;max-width:100%}
+.cain-abel #notice,.cain-abel .tools>details>p{line-height:1.9}
+.cain-abel button[hidden]{display:none}
+.cain-abel #stage[data-phase=alone] .abel-name{opacity:0}
+.cain-abel #stage[data-phase=excluding] .abel-name{opacity:0}
+.cain-abel #stage[data-ending=true] .scene-target{visibility:hidden}
+.about-cain main{max-width:900px}
+.about-cain .intro{font-size:15px;line-height:2}
+.about-cain h2{font-size:26px;line-height:1.5;margin-top:48px}
+.about-cain li{line-height:2;font-size:14px}
+@media(max-width:600px){
+ .cain-abel .heading{align-items:center}.cain-abel .heading .day{max-width:30%;font-size:10px}
+ .cain-abel .controls{padding:16px;gap:14px;min-height:150px;align-items:flex-start}
+ .cain-abel .guidance{flex-basis:100%}.cain-abel #reset{margin-left:auto}
+ .character-name{font-size:9px;letter-spacing:.04em;bottom:2%}.character-name span{font-size:8px}
+ .cain-abel .tool-row label{width:100%}.cain-abel select{width:100%}
+ .cain-abel .heading h1 .en-title{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){.character-name,.scene-target{transition:none}}
+.character-name{z-index:1}
