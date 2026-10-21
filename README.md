@@ -85,3 +85,29 @@ p5.js 1.9.4は同リポジトリ同梱版から取得。LGPL-2.1（`vendor/p5-LI
 ## 検証
 
 `docs/verification.md` を参照。開発用テストは `npm ci` とChromiumを用意し、HTTPサーバー起動後 `CHROMIUM_PATH=/usr/bin/chromium npm test` を実行します。npm依存は通常配信に不要です。実機iOS/Androidの音声出力と保存先UIは自動テストでは保証できません。
+
+## 日本語・英語 / Japanese and English
+
+トップ、操作案内、各日の名称、保存・共有、確認・エラー表示、作品解説は日本語と英語の併記です。言語切替は不要です。保存済みの世界を引き継げます。英語の文言はHTML、動的な案内は `001-creation/sketch.js`、音声エラーは `sound.js` で管理します。
+
+The gallery, all seven days, interaction hints, controls, export and sharing dialogs, confirmation and error messages, and artist’s notes display Japanese and English together. No language switch is needed. Existing saved worlds remain compatible.
+
+### Quick start
+
+Serve the repository root with `python3 -m http.server 8000`, then open `http://localhost:8000/`. No build step or runtime package installation is required. p5.js is bundled locally; the soundscape uses Web Audio.
+
+1. Tap the darkness to create light.
+2. Drag the waters vertically to reveal the sky.
+3. Drag horizontally to reveal land, then tap the land to grow at least three plants.
+4. Drag both the sun and moon into the sky; tap the night sky on the right to add at least three stars.
+5. Tap the sea for at least two fish and the sky for at least two birds.
+6. Tap the land for at least three animals, then choose **Welcome Marpan**.
+7. Choose **Next day** to rest and watch the completed world. No new creations are added on day seven.
+
+The first interaction enables sound. Use the sound button to mute it. With the world focused, Enter or Space provides a keyboard alternative. Your world and each completed day are saved in this browser; clearing browser storage deletes them.
+
+Open **Save your world & about this work** to export any completed day as a 2560×1600 or 3840×2400 PNG without controls. On phones, save the image from the preview or use supported file sharing. Actual device menus vary.
+
+The creation sequence follows Genesis 1:1–2:3. Interactions, freedom of placement and number, completion thresholds, animation, coexisting day and night, short celestial cycles, sound, and Marpan as a symbol of humankind are artistic additions. God is not depicted, and no translated Bible text is quoted. This is an independent artistic interpretation, not religious instruction.
+
+For GitHub Pages, select **Settings → Pages → Deploy from a branch → main → /(root)**. The site URL is https://sawanoto.github.io/BibleSketch/ . To add another work, create its own numbered folder (for example `002-title/`) and add a card to `index.html`. Keep existing work URLs stable.
