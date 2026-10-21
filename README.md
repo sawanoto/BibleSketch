@@ -18,6 +18,16 @@ An interactive interpretation of Genesis 4:1–16 with two endings and six high-
 
 実行・操作・素材出典・原典との区別：[作品README](002-cain-and-abel/README.md)。ブラウザテスト：`npm run test:cain-abel`。検証記録：[No.002の確認結果](docs/002-verification.md)。No.1・共通マーパン描画は変更しません。
 
+## No.003 · ノアの方舟 / Noah’s Ark
+
+創世記6〜9章の「災害を生き延び、次の世界へ生命をつなぐ」構造を、隕石衝突に置き換えた作品です。隕石は一度だけ落とせ、森林・海・草原で生存する生命と再生後の姿が変わります。木造の船や現代人は登場しません。
+
+洪水と隕石衝突を同一の歴史的出来事として扱いません。生存数は創作上の仮想シナリオで、科学的予測ではありません。再生する動物は生存者と同じ分類の子孫だけです。
+
+A fictional reinterpretation of Genesis 6–9: surviving life itself becomes the ark. One impact, three distinct habitat scenarios, and renewal across many generations. This is not a historical or scientific claim connecting the Flood to an impact.
+
+[作品README・操作・出典の区別](003-noahs-ark/README.md) ／ [確認結果](docs/003-verification.md)。開発テスト：`npm run test:noah`。主要6場面を高解像度PNGで出力できます。
+
 ## 実行
 
 ビルド・npmインストール不要。Python 3を使用する例：

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ノアの方舟 / Noah’s Ark — BIBLE Sketch No.003</title>
+<meta name="description" content="生き残った生命を、次の世界の方舟に見立てる。A fictional meditation on survival, inheritance, and renewal.">
+<link rel="stylesheet" href="../shared/style.css"><link rel="stylesheet" href="style.css">
+</head><body class="experience ark">
+<header><a href="../">BIBLE Sketch <span> / 003</span></a><button id="sound" aria-pressed="false">音を有効にする<span class="en" lang="en">Enable sound</span></button></header>
+<div class="heading"><div><p>GENESIS 6–9 · AN IMAGINED WORLD</p><h1>ノアの方舟 <span class="en-title" lang="en">Noah’s Ark</span></h1></div><span class="day" id="chapter">生命 / Life</span></div>
+<main id="stage" aria-label="左に森林、中央に海、右に草原がつながる世界 / A continuous world of forest, sea, and grassland">
+<button id="meteor" aria-label="隕石をドラッグ。矢印キーで位置を選びEnterで落とす / Drag the meteor, or use arrow keys and Enter to drop it" aria-describedby="hint"><span class="sr-only">隕石 / Meteor</span></button>
+<div class="habitat-name forest-name">森林<span lang="en">Forest</span></div><div class="habitat-name sea-name">海<span lang="en">Sea</span></div><div class="habitat-name grassland-name">草原<span lang="en">Grassland</span></div>
+<div id="aim-label" hidden></div>
+</main>
+<div class="controls"><p id="hint" role="status">隕石を左右にドラッグして、落下地点を選ぶ。手を離すと、一度だけ落ちる。<span class="en" lang="en">Drag sideways to choose the impact point. Release to drop the meteor once.</span></p><button id="reset">はじめから<span class="en" lang="en">Start over</span></button></div>
+<div class="tools"><details><summary>生命の記録・静止画・作品について<span class="en" lang="en">Life records, stills &amp; about this work</span></summary>
+<section id="results" hidden aria-label="生存結果 / Survival record"><h2>生き残ったもの<span class="en" lang="en">What endured</span></h2><p id="shelters"></p><div class="table-wrap"><table><caption>衝突前 → 生存 → 再生後（仮想シナリオ）<span class="en" lang="en">Before → survivors → renewed world (fictional scenario)</span></caption><thead><tr><th scope="col">生命 / Life</th><th scope="col">森林 / Forest</th><th scope="col">海 / Sea</th><th scope="col">草原 / Grassland</th></tr></thead><tbody id="population"></tbody></table></div></section>
+<div class="tool-row"><label>体験した場面<span class="en" lang="en">Reached scene</span><select id="scene" aria-label="保存する場面 / Scene to export"></select></label><label>解像度<span class="en" lang="en">Resolution</span><select id="resolution"><option value="2560">2560 × 1600</option><option value="3840">3840 × 2400</option></select></label><button id="export">PNGを書き出す<span class="en" lang="en">Export PNG</span></button></div>
+<label class="motion"><input id="soften" type="checkbox"> 光と揺れを抑える / <span lang="en">Soften flash &amp; shake</span></label>
+<p id="notice" role="status">このプレイで体験した6場面を保存できます。リセットすると今回の記録も初期化します。<span class="en" lang="en">Export the six scenes reached in this play. Start over clears this play’s records.</span></p>
+<p>洪水を隕石衝突に置き換えた創作です。両者が同じ歴史的出来事だったと主張する作品ではありません。生存結果も科学的予測ではありません。<span class="en" lang="en">A fictional reinterpretation, not a claim that the Flood and an asteroid impact were the same historical event. Survival outcomes are not scientific predictions.</span></p>
+<a href="about.html">原典と作品の解釈について ↗<span class="en" lang="en">The biblical text &amp; this interpretation ↗</span></a></details></div>
+<dialog id="preview" aria-label="静止画を保存 / Save a still"><img id="image" alt="ノアの方舟の場面 / A scene from Noah’s Ark"><p>画像を長押しして保存することもできます。<span class="en" lang="en">You can also touch and hold the image to save it.</span></p><div class="tool-row"><a id="download" download>PNGを保存 ↗<span class="en" lang="en">Save PNG ↗</span></a><button id="share">共有・写真へ保存<span class="en" lang="en">Share / save image</span></button><button id="close">閉じる<span class="en" lang="en">Close</span></button></div><p id="export-notice" role="status"></p></dialog>
+<noscript>この作品にはJavaScriptが必要です。 / JavaScript is required.</noscript>
+<script src="../vendor/p5.min.js"></script><script src="../shared/marpan-25d.js"></script><script src="world.js"></script><script src="sound.js"></script><script src="sketch.js"></script>
+</body></html>

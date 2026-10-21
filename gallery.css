@@ -3,3 +3,5 @@
 .cover-cain{background:#26363d;display:flex;align-items:center}
 .cover-cain img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
 .cover-cain small{background:#152630bb;padding:6px 10px;border-radius:2px;font-size:10px;letter-spacing:.12em}
+
+.cover-ark{background:#547c74;display:flex;align-items:center}.cover-ark img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.cover-ark small{background:#152630bb;padding:6px 10px;border-radius:2px;font-size:10px;letter-spacing:.12em}
