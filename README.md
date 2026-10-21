@@ -28,6 +28,14 @@ A fictional reinterpretation of Genesis 6–9: surviving life itself becomes the
 
 [作品README・操作・出典の区別](003-noahs-ark/README.md) ／ [確認結果](docs/003-verification.md)。開発テスト：`npm run test:noah`。主要6場面を高解像度PNGで出力できます。
 
+## No.004 · バベルの塔 / Tower of Babel
+
+創世記11章1〜9節の結末を逆転させた作品です。6〜8体の吹き出しを「左→下→右→上」と操作し、全員が上を向いた瞬間に協力して塔を完成させます。矢印は言語そのものではなく、建設方針や意思の象徴です。同じ言語を話すことと同じ目的を共有することを同一視しません。
+
+A reversal of the ending in Genesis 11:1–9: different intentions become a shared building goal. Only unanimous upward arrows start the tower. The arrows symbolize intentions, not languages.
+
+[操作・原典との区別・PNG保存](004-tower-of-babel/README.md) ／ [検証結果](docs/004-verification.md)。開発テスト：`npm run test:babel`。日英併記、共通マーパン、6場面の高解像度PNGに対応。
+
 ## 実行
 
 ビルド・npmインストール不要。Python 3を使用する例：
