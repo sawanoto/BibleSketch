@@ -10,7 +10,7 @@ Chromium、PC 1440×1000、タッチ390×844、最小幅320pxで確認。
 - PC・タッチのブラウザJavaScriptエラーなし。320pxでページの横はみ出しなし。
 - 共通描画ファイルとNo.001〜004のソースを変更していない。
 
-Automated tests: `npm run test:isaac` uses real Chromium pointer/touch events, both branches, equal button dimensions/colors, audio source cleanup, all nine PNGs, reset and narrow layout. Generated stills are `005-scene-*.png` alongside this document. Viewport screenshots are generated in the workspace scratch folder.
+Automated tests: `npm run test:isaac` uses real Chromium pointer/touch events, both branches, equal button dimensions/colors, audio source cleanup, all nine PNGs, reset and narrow layout. Generated stills are `005-scene-*.png` alongside this document. Viewport screenshots are `005-desktop-*.png` and `005-mobile-*.png`.
 
 既存作品の回帰テスト：`npm test`、`npm run test:cain-abel`、`npm run test:noah`、`npm run test:babel`。
 
