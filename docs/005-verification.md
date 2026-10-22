@@ -12,7 +12,7 @@ Chromium、PC 1440×1000、タッチ390×844、最小幅320pxで確認。
 
 Automated tests: `npm run test:isaac` uses real Chromium pointer/touch events, both branches, equal button dimensions/colors, audio source cleanup, all nine PNGs, reset and narrow layout. Generated stills are `005-scene-*.png` alongside this document. Viewport screenshots are `005-desktop-*.png` and `005-mobile-*.png`.
 
-既存作品の回帰テスト：`npm test`、`npm run test:cain-abel`、`npm run test:noah`、`npm run test:babel`。
+既存作品の回帰テストはすべて成功：`npm test`、`npm run test:cain-abel`、`npm run test:noah`、`npm run test:babel`。
 
 未確認：実機iOS／Androidでの音の聴感・音量、OSの共有・長押し保存画面、低メモリ端末性能。Kindle用の最終組版・入稿は別途必要。キーボード操作とAudioContextを無効にしたブラウザでも結末へ到達しました。
 
