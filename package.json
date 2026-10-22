@@ -7,7 +7,8 @@
     "test": "node tests/creation.cjs",
     "test:cain-abel": "node tests/cain-abel.cjs",
     "test:noah": "node tests/noah.cjs",
-    "test:babel": "node tests/babel.cjs"
+    "test:babel": "node tests/babel.cjs",
+    "test:isaac": "node tests/isaac.cjs"
   },
   "devDependencies": {
     "playwright": "1.56.1"

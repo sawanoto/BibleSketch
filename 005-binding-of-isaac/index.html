@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>イサクの燔祭 / The Binding of Isaac — BIBLE Sketch No.005</title>
+<meta name="description" content="親と子、選択と権力をめぐる寓話。A parable of parent, child, choice and power.">
+<link rel="stylesheet" href="../shared/style.css"><link rel="stylesheet" href="style.css">
+</head><body class="experience isaac">
+<header><a href="../">BIBLE Sketch <span> / 005</span></a><button id="sound" aria-pressed="false">音を有効にする<span class="en" lang="en">Enable sound</span></button></header>
+<div class="heading"><div><p>GENESIS 22:1–19 · TWO POSSIBLE ENDINGS</p><h1>イサクの燔祭 <span class="en-title" lang="en">The Binding of Isaac</span></h1></div><span id="chapter" class="day"></span></div>
+<main id="stage" aria-label="山上の親と子 / Parent and child on a mountain"><div id="people"><button data-person="parent" aria-label="親マーパンを選ぶ / Select the parent"></button><button data-person="child" aria-label="子マーパンを選ぶ / Select the child"></button></div></main><div class="controls"><p id="hint" role="status">親か子をタップしてください。<span class="en" lang="en">Tap either the parent or the child.</span></p><button id="reset">はじめから<span class="en" lang="en">Start over</span></button></div>
+<div class="tools"><details><summary>場面の記録・作品について<span class="en" lang="en">Save a scene &amp; about this work</span></summary>
+<div class="tool-row"><label>体験した場面<span class="en" lang="en">Reached scene</span><select id="scene" aria-label="保存する場面 / Scene to export"></select></label><label>解像度<span class="en" lang="en">Resolution</span><select id="resolution"><option value="2560">2560 × 1600</option><option value="3840">3840 × 2400</option></select></label><button id="export">PNGを書き出す<span class="en" lang="en">Export PNG</span></button></div>
+<p id="notice" role="status">9場面を個別に保存できます。分岐の記録はやり直しても残ります。<span class="en" lang="en">Save nine scenes. Branch records remain available when you start over.</span></p>
+<p>「いいえ」で親が倒れる結末は、原典にない作者独自の架空の分岐です。<span class="en" lang="en">The parent falling after “No” is an invented branch absent from the biblical text.</span></p><a href="about.html">原典と作品の解釈について ↗<span class="en" lang="en">The biblical text &amp; this interpretation ↗</span></a></details></div>
+<dialog id="preview" aria-label="静止画を保存 / Save a still"><img id="image" alt="イサクの燔祭の場面 / A scene from The Binding of Isaac"><p>スマートフォンでは画像を長押しして保存できます。<span class="en" lang="en">On a smartphone, touch and hold the image to save it.</span></p><div class="tool-row"><a id="download" download>PNGを保存 ↗<span class="en" lang="en">Save PNG ↗</span></a><button id="share">共有・写真へ保存<span class="en" lang="en">Share / save image</span></button><button id="close">閉じる<span class="en" lang="en">Close</span></button></div><p id="export-notice" role="status"></p></dialog>
+<dialog id="choice" aria-labelledby="question"><h2 id="question">神の命令に従い、子を捧げますか？<span class="en" lang="en">Will you obey God’s command and offer your child?</span></h2><div class="choices"><button id="yes">はい<span class="en" lang="en">Yes</span></button><button id="no">いいえ<span class="en" lang="en">No</span></button></div></dialog><noscript>この作品にはJavaScriptが必要です。 / JavaScript is required.</noscript>
+<script src="../vendor/p5.min.js"></script><script src="../shared/marpan-25d.js"></script><script src="sound.js"></script><script src="sketch.js"></script>
+</body></html>
