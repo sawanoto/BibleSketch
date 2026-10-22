@@ -139,3 +139,8 @@ Open **Save your world & about this work** to export any completed day as a 2560
 The creation sequence follows Genesis 1:1–2:3. Interactions, freedom of placement and number, completion thresholds, animation, coexisting day and night, short celestial cycles, sound, and Marpan as a symbol of humankind are artistic additions. God is not depicted, and no translated Bible text is quoted. This is an independent artistic interpretation, not religious instruction.
 
 For GitHub Pages, select **Settings → Pages → Deploy from a branch → main → /(root)**. The site URL is https://sawanoto.github.io/BibleSketch/ . To add another work, create its own numbered folder (for example `002-title/`) and add a card to `index.html`. Keep existing work URLs stable.
+
+
+## No.005 イサクの燔祭 / The Binding of Isaac
+
+`005-binding-of-isaac/` — 創世記22:1–19。二つの選択と不公平な結果を体験する作者独自の寓意。拒否した親が倒れる結末は原典にはありません。日英解説・操作・9場面のPNGは [作品README](005-binding-of-isaac/README.md) を参照。 / A parable of choice and unequal outcomes; the refusal branch is invented, not biblical. See the work README for bilingual notes, controls and nine PNG exports.
