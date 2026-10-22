@@ -8,6 +8,16 @@ https://github.com/sawanoto/BibleSketch
 
 作者が新設した `sawanoto/BibleSketch` 用の独立シリーズです。MovingSketch・LifeSketchなど既存シリーズは変更していません。従来の希望名 `bible-sketch` と異なり、GitHubのリポジトリ名・公開パスは `BibleSketch` を使用します。
 
+## No.002 · カインとアベル / Cain and Abel
+
+創世記4章1〜16節を題材に、怒りを弟へ向けるか、自分の捧げ物に向き合うかを操作する作品を追加しました。トップのNo.002カードから開けます。2つの結末と主要6場面の高解像度PNG出力に対応。
+
+神が兄の捧げ物を受け入れなかった理由は原典に明記されていません。籠を整えて弟を攻撃しない分岐は作者独自の表現であり、改善が神の承認につながるとは表現しません。
+
+An interactive interpretation of Genesis 4:1–16 with two endings and six high-resolution stills. The text does not state why Cain’s offering was not accepted. Tending the basket is an imagined alternative and never earns divine approval.
+
+実行・操作・素材出典・原典との区別：[作品README](002-cain-and-abel/README.md)。ブラウザテスト：`npm run test:cain-abel`。検証記録：[No.002の確認結果](docs/002-verification.md)。No.1・共通マーパン描画は変更しません。
+
 ## 実行
 
 ビルド・npmインストール不要。Python 3を使用する例：
