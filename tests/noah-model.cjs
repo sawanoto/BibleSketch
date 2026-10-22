@@ -1,0 +1,32 @@
+const assert = require('node:assert/strict');
+const { ArkWorld, arkLife, arkSurvival, arkDescendants } = require('../003-noahs-ark/world.js');
+const results = [];
+for (const x of [.18, .5, .83]) {
+  const world = new ArkWorld();
+  assert.equal(world.drop(NaN), false);
+  assert.equal(world.drop(x), true); assert.equal(world.drop(.9), false);
+  const ids = new Set(world.survivors.map(a => a.id));
+  assert.equal(world.survivors.some(a => a.type === 'dinosaur'), false);
+  assert.deepEqual(world.survivors, arkSurvival(arkLife(), x));
+  assert.equal(world.descendants.length > 0, true);
+  assert.equal(world.descendants.every(a => ids.has(a.parentId) && world.survivors.find(p => p.id === a.parentId).type === a.type), true);
+  assert.equal(world.survivors.length + world.descendants.length <= 128, true);
+  const phases = []; world.onPhase = phase => phases.push(phase);
+  for (let i = 0; i < 260; i++) world.tick(.1);
+  assert.equal(world.phase, 'world');
+  assert.deepEqual(phases, ['impact', 'winter', 'survivors', 'renewal', 'world']);
+  assert.equal(world.drop(.1), false);
+  assert.equal(world.counts('renewed').forest.dinosaur + world.counts('renewed').grassland.dinosaur, 0);
+  results.push(world.counts());
+  world.reset(); assert.equal(world.drops, 0); assert.equal(world.drop(.5), true);
+}
+assert.equal(new Set(results.map(result => JSON.stringify(result))).size, 3);
+assert.equal(results[1].sea.fish < results[0].sea.fish, true);
+assert.equal(results[0].forest.mammal < results[2].forest.mammal, true);
+assert.equal(results[2].grassland.bird < results[0].grassland.bird, true);
+const smallSurvivors = arkSurvival(arkLife(), .5).filter(a => a.type === 'mammal');
+assert.equal(smallSurvivors.every(a => a.protection >= .8), true);
+assert.equal(arkDescendants([]).length, 0);
+const a = arkSurvival(arkLife(), .05).map(a => a.id), b = arkSurvival(arkLife(), .31).map(a => a.id);
+assert.notDeepEqual(a, b, 'Subregion position changes which individuals persist');
+console.log('Noah model: three distinct deterministic outcomes, one drop, dinosaur extinction, parental lineage, caps, reset PASS');
